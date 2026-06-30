@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Attendance Summary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="loadAdminSummary()">
+
+<header class="topbar">
+  <div class="topbar-title">Academic Data Management Portal</div>
+  <div class="topbar-role">Admin – Attendance Summary</div>
+</header>
+
+<div class="container">
+    <h2>Attendance Summary (All Students)</h2>
+
+    <div class="card">
+        <div id="summaryTable"></div>
+    </div>
+
+    <button class="secondary" onclick="window.location.href='admin_dashboard.html'">
+        Back to Dashboard
+    </button>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>

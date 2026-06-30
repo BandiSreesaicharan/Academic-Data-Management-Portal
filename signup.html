@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Signup – Academic Data Management Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-title">Academic Data Management Portal</div>
+  <div class="topbar-role">Signup</div>
+</header>
+
+<div class="container">
+  <h2>Create Account</h2>
+
+  <div class="card">
+    <input id="userid" placeholder="User ID (integer)">
+    <input id="name" placeholder="Full Name">
+
+    <select id="role">
+      <option value="student">Student</option>
+      <option value="faculty">Teacher</option>
+      <option value="admin">Admin</option>
+    </select>
+
+    <input id="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+
+    <input id="department" placeholder="Department (optional)">
+    <input id="rollNumber" placeholder="Roll Number (students)">
+    <input id="batch" placeholder="Batch (students)">
+
+    <button class="primary" onclick="signup()">Signup</button>
+    <p class="msg" id="msg"></p>
+  </div>
+
+  <p style="text-align:center; margin-top:10px;">
+    <a href="login.html">Have an account? Login</a>
+  </p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

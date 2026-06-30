@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-title">Academic Data Management Portal</div>
+  <div class="topbar-role">Teacher Dashboard</div>
+</header>
+
+<div class="container">
+
+    <h2>Teacher Dashboard</h2>
+
+    <!-- Assigned Courses -->
+    <div class="card">
+        <h3 class="section-title">Your Courses</h3>
+        <button class="primary" onclick="loadMyCourses()">Load My Courses</button>
+        <div id="courseList" style="margin-top:10px;"></div>
+    </div>
+
+    <!-- List Students -->
+    <div class="card">
+        <h3 class="section-title">Students in Selected Course</h3>
+        <input type="number" id="selectedCourseId" placeholder="Course ID">
+        <button class="primary" onclick="loadStudents()">Load Students</button>
+        <div id="studentList" style="margin-top:10px;"></div>
+    </div>
+
+    <!-- Mark Attendance -->
+    <div class="card">
+        <h3 class="section-title">Mark Attendance</h3>
+        <input id="attId" placeholder="Attendance ID">
+        <input id="attDate" type="date">
+        <div id="attendanceButtons" style="margin-top:10px;"></div>
+        <button id="saveAttendanceBtn" class="primary" style="margin-top: 18px;" onclick="saveAttendance()">Save Attendance</button>
+    </div>
+
+    <!-- Summary -->
+    <div class="card">
+        <h3 class="section-title">Course Summary</h3>
+        <input id="summaryCourseId" placeholder="Course ID">
+        <button class="primary" onclick="showSummary()">View Summary</button>
+        <div id="summaryOut" style="margin-top:12px;"></div>
+    </div>
+
+    <button class="secondary" onclick="logout()">Logout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Students Below Percentage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-title">Academic Data Management Portal</div>
+  <div class="topbar-role">Admin – Below Percentage</div>
+</header>
+
+<div class="container">
+    <h2>Students Below Custom Percentage</h2>
+
+    <div class="card">
+        <label>Enter Minimum Percentage (e.g. 70):</label>
+        <input type="number" id="percentInput" placeholder="Enter percentage">
+        <button class="primary" onclick="fetchBelowPercentage()">Search</button>
+    </div>
+
+    <div class="card">
+        <div id="belowResult"></div>
+    </div>
+
+    <button class="secondary" onclick="window.location.href='admin_dashboard.html'">
+        Back to Dashboard
+    </button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

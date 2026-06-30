@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-title">Academic Data Management Portal</div>
+  <div class="topbar-role">Student Dashboard</div>
+</header>
+
+<div class="container">
+
+    <h2>Student Dashboard</h2>
+
+    <!-- Student Name -->
+    <div class="card">
+        <h3 class="section-title">Welcome, <span id="studentName"></span></h3>
+    </div>
+
+    <!-- Subject-Wise Attendance -->
+    <div class="card">
+        <h3 class="section-title">Subject-wise Attendance</h3>
+        <button class="primary" onclick="loadSubjectAttendance()">Load Attendance</button>
+        <div id="subjectAttendance" style="margin-top:12px;"></div>
+    </div>
+
+    <!-- Filter Attendance by Date -->
+    <div class="card">
+        <h3 class="section-title">Filter Attendance by Date</h3>
+
+        <label>From:</label>
+        <input type="date" id="fromDate">
+
+        <label>To:</label>
+        <input type="date" id="toDate">
+
+        <button class="primary" onclick="filterAttendance()">Filter</button>
+
+        <div id="dateWiseResult" style="margin-top:12px;"></div>
+    </div>
+
+    <button class="secondary" onclick="logout()">Logout</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

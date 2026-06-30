@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-title">Academic Data Management Portal</div>
+  <div class="topbar-role">Admin Dashboard</div>
+</header>
+
+<div class="container">
+    <h2>Admin Dashboard</h2>
+
+    <!-- Add Course -->
+    <div class="card">
+        <h3 class="section-title">Add Course</h3>
+        <input id="courseId" placeholder="Course ID (int)">
+        <input id="courseName" placeholder="Course name">
+        <input id="courseFaculty" placeholder="Faculty userId">
+        <input id="courseSem" placeholder="Semester (int)">
+        <button class="primary" onclick="adminAddCourse()">Add Course</button>
+        <div id="adminWarning"></div>
+        <p id="course-msg" class="msg" style="margin-top:6px;"></p>
+    </div>
+
+    <!-- Map Student to Course -->
+    <div class="card">
+        <h3 class="section-title">Map Student to Course</h3>
+        <input id="mapId" placeholder="Map ID (int)">
+        <input id="mapStudent" placeholder="Student ID">
+        <input id="mapCourse" placeholder="Course ID">
+        <button class="primary" onclick="mapStudentToCourse()">Map</button>
+        <p id="map-msg" class="msg" style="margin-top:6px;"></p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="card">
+        <h3 class="section-title">Reports</h3>
+        <button class="primary" onclick="window.location.href='attendance_summary.html'">
+            View Attendance Summary
+        </button>
+        <button class="primary" onclick="window.location.href='below_percentage.html'">
+            Students Below Custom Percentage
+        </button>
+    </div>
+
+    <button class="secondary" onclick="logout()">Logout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
