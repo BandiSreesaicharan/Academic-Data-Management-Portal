@@ -270,3 +270,63 @@ This project strengthened my understanding of:
 - Backend Data Processing
 
 ---
+
+# Getting Started
+
+## 1. Clone the Repository
+
+```bash
+git clone https://github.com/BandiSreesaicharan/Academic-Data-Management-Portal.git
+```
+
+## 2. Navigate to the Project Directory
+
+```bash
+cd Academic-Data-Management-Portal
+```
+
+## 3. Install Dependencies
+
+```bash
+npm install
+```
+
+## 4. Set Up the MySQL Database
+
+Create a MySQL database:
+
+```sql
+CREATE DATABASE attendance_final;
+```
+
+Import the provided SQL dump:
+
+```bash
+mysql -u root -p attendance_final < attendance_final.sql
+```
+
+Update the MySQL credentials in `server.js` if required.
+
+## 5. Start the Backend Server
+
+```bash
+npm start
+```
+
+If the setup is successful, you should see:
+
+```text
+Server running on http://localhost:5000
+Connected to MySQL db attendance_final
+```
+
+## 6. Launch the Application
+
+Open **`index.html`** using the **Live Server** extension in Visual Studio Code.
+
+The application will be available at:
+
+```
+Frontend : http://127.0.0.1:5500
+Backend  : http://localhost:5000
+```
